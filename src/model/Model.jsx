@@ -1,7 +1,7 @@
 var request = require('superagent');
 var _ = require("lodash");
 
-var API_ROOT = "http://localhost:54322/data/2.5/";
+var API_ROOT = "http://zonnetjewolkje.nl/data/2.5/";
 
 class Location {
     constructor(city, country) {

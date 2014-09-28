@@ -7,7 +7,10 @@ var BoringWeatherInfo = React.createClass({
     },
 
     render() {
-        console.log(this.props.data);
+        if(!this.props.data.hasData()) {
+            return <div className="BoringWeatherInfo">Loading!</div>;
+        }
+
         var iconUrl = "http://openweathermap.org/img/w/" + this.props.data.weather[0].icon + ".png";
 
         return (

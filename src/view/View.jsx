@@ -1,6 +1,7 @@
 ﻿require("./View.styl");
 var Model = require("model/Model");
 var BoringWeatherInfo = require("./BoringWeatherInfo");
+var TextBox = require("common/TextBox");
 
 var View = React.createClass({
     getInitialState() {
@@ -9,24 +10,28 @@ var View = React.createClass({
         };
     },
 
+    onCityChanged(newCity) {
+        this.state.model.setCity(newCity);
+    },
+
     render() {
         var model = this.state.model;
-        if(!model.currentWeather.hasData()) {
-            return <div className="View">Loading!</div>;
-        }
 
         return <div className="View">
-            <BoringWeatherInfo data={model.currentWeather}/>
-            <BoringWeatherInfo data={model.currentWeather}/>
-            <BoringWeatherInfo data={model.currentWeather}/>
+            Beautifully show the weather in: 
+            <TextBox onChange={this.onCityChanged} defaultValue={model.location.city}/>
+
+            <BoringWeatherInfo data={model.location.currentWeather}/>
+            <BoringWeatherInfo data={model.location.currentWeather}/>
+            <BoringWeatherInfo data={model.location.currentWeather}/>
             <br/>
-            <BoringWeatherInfo data={model.currentWeather}/>
-            <BoringWeatherInfo data={model.currentWeather}/>
-            <BoringWeatherInfo data={model.currentWeather}/>
+            <BoringWeatherInfo data={model.location.currentWeather}/>
+            <BoringWeatherInfo data={model.betterLocation.currentWeather}/>
+            <BoringWeatherInfo data={model.location.currentWeather}/>
             <br/>
-            <BoringWeatherInfo data={model.currentWeather}/>
-            <BoringWeatherInfo data={model.currentWeather}/>
-            <BoringWeatherInfo data={model.currentWeather}/>
+            <BoringWeatherInfo data={model.location.currentWeather}/>
+            <BoringWeatherInfo data={model.location.currentWeather}/>
+            <BoringWeatherInfo data={model.location.currentWeather}/>
             <br/>
         </div>;
     }

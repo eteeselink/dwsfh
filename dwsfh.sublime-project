@@ -1,0 +1,22 @@
+{
+	"folders":
+	[
+		{
+			"path": "./src",
+            "file_exclude_patterns": ["model/**.js.map"]
+		},
+        {
+            "path": ".",
+            "name": "root"
+        }
+    ],
+    "settings":
+    {
+        "tab_size": 4,
+        "translate_tabs_to_spaces": true,
+        "default_line_ending": "unix",
+        "ensure_newline_at_eof_on_save": true,
+        "font_size": 14,
+        "line_numbers": false
+    }
+}

@@ -1,0 +1,19 @@
+/*
+Global style file. This file is supposed to stay very lean.
+
+If you find the urge to put common styles for common elements 
+here (e.g. buttons, inputs or links), then resist that urge,
+and make simple lightweight React components for them instead
+(and put the styles in a .styl file for that component).
+
+Global classes that could be applied to a variety of elements go in
+specialized style files such as typography.styl.
+*/
+
+global-reset()
+
+*, *:before, *:after
+    box-sizing border-box
+
+body, html
+    height 100%

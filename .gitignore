@@ -1,0 +1,13 @@
+# libraries can be `npm install`ed. would like to include them but
+# npm's subsubsubsubdir approach doesn't mesh well with Windows's 
+# ridiculous MAX_PATH. 
+node_modules
+
+# WebStorm
+.idea
+
+*.sublime-workspace
+
+.DS_Store
+
+/src/app-bundle.*

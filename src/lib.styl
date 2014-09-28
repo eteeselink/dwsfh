@@ -1,0 +1,24 @@
+/* 
+
+Library stylus file - define global variables and functions here.
+Don't put any actual CSS in here (like, selectors and all), those belong
+in component style files.
+
+*/
+
+// LAYOUT
+    $header-height = 68px
+    $title-bar-height = 30px
+
+
+// SKIN
+    $main-color = #FE4365
+
+    // sets background color to `color` and foreground color to an 
+    // almost-white shade of `color`
+    foreground-background(color)
+        background-color color
+        color lightness(color, 95%) 
+
+// TYPOGRAPHY
+    $main-font-size = 0.8rem

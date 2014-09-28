@@ -4,7 +4,7 @@ TO GET STARTED
 Please do this before the workshop starts, 
 like when I'm saying something boring or incomprehensible.
 
-From the repository root directory:
+First, clone this code. Then, from the repository root directory:
 
     npm install
 
@@ -23,5 +23,5 @@ Now open <http://localhost:54321> and there you go!
 
 Troubleshooting:
 * You might need to `sudo` that, not sure.
-* If you're on Windows and it doesn't work, your Git directory might not be on the system PATH.
-* 
+* If you're on Windows and it doesn't work, your Git directory might not be on the system PATH. The `.cmd` just calls the `.sh` so you have to have sh (which comes with Git)
+* Try fiddling with firewalls if the server starts but you can't reach it. I'm sure the internet is very trustworthy today.

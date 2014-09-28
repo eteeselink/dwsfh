@@ -4,7 +4,9 @@ TO GET STARTED
 Please do this before the workshop starts, 
 like when I'm saying something boring or incomprehensible.
 
-First, clone this code. Then, from the repository root directory:
+Please visit the [wiki](https://github.com/eteeselink/dwsfh/wiki/Participants) and add your GitHub username there.
+
+Now, clone this code. Then, from the repository root directory:
 
     npm install
 

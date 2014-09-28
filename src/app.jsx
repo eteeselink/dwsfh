@@ -5,7 +5,10 @@ require("./typography.styl");
 
 var View = require("./view/view");
 
-window.view = React.renderComponent(<View/>,
+var view = React.renderComponent(<View/>,
   document.getElementById('hello')
 );
 
+window.refreshView = function() {
+    view.forceUpdate();
+};

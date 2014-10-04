@@ -16,7 +16,7 @@ var WeatherSlides = React.createClass({
         return (
             <div className="WeatherSlides">
                 <h2>Sliders come here</h2>
-                
+                <img src="http://images.all-free-download.com/images/graphiclarge/cool_102245.jpg"/>
             </div>
         );
     }

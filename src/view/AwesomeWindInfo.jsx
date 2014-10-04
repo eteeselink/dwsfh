@@ -13,7 +13,7 @@ var AwesomeWindInfo = React.createClass({
         if(!this.props.data.hasData()) {
             return <div className="AwesomeWindInfo">Loading!</div>;
         }   
-        var width = Math.round(this.props.data.wind.speed*30);
+        var width = Math.round(this.props.data.wind.speed*40);
 
         var style = {
             width: "100%",

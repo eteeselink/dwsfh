@@ -17,7 +17,7 @@ var BoringWeatherInfo = React.createClass({
 
         var pixels = tempCelcius * 3; 
 
-        debugger
+        
         return (
           
           <div className="BoringWeatherInfo Thermometer">

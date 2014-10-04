@@ -13,12 +13,12 @@ var AwesomeWindInfo = React.createClass({
         if(!this.props.data.hasData()) {
             return <div className="AwesomeWindInfo">Loading!</div>;
         }   
-        var height = Math.round(this.props.data.wind.speed*10);
+        var width = Math.round(this.props.data.wind.speed*30);
 
         var style = {
-            height: height,
             width: "100%",
-            transform: "rotate("+this.props.data.wind.deg+"deg)"
+            transform: "rotate("+this.props.data.wind.deg+"deg)",
+            transformOrigin: "center center"
         };
 
         return (
@@ -26,7 +26,9 @@ var AwesomeWindInfo = React.createClass({
             <h2>Awesome wind in {this.props.data.name}</h2>
                 <div className="container">
                     <div style={style}>
-                    <img src="http://transom.org/wp/wp-content/uploads/2012/07/straight-arrow-marquee.gif?9d7bd4" />
+                    <img
+                        width={width}px
+                        src="http://transom.org/wp/wp-content/uploads/2012/07/straight-arrow-marquee.gif?9d7bd4" />
                     </div>
                 </div>    
             </div>

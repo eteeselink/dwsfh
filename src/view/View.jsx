@@ -1,15 +1,12 @@
 ﻿require("./View.styl");
 var Model = require("model/Model");
 var BoringWeatherInfo = require("./BoringWeatherInfo");
-<<<<<<< HEAD
 var ComparingWeatherBox = require("./ComparingWeatherBox");
 var AwesomeWeatherInfo = require("./AwesomeWeatherInfo");
 var AwesomeWindInfo = require("./AwesomeWindInfo");
 var GonewildWeatherInfo = require("./GonewildWeather");
-
-=======
 var BoringWeatherInfoTeamBier = require("./BoringWeatherInfoTeamBier");
->>>>>>> super awesome
+
 var TextBox = require("common/TextBox");
 
 var View = React.createClass({

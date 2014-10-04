@@ -18,15 +18,17 @@ var AwesomeWindInfo = React.createClass({
         var style = {
             height: height,
             width: "100%",
-            background: "red",
             transform: "rotate("+this.props.data.wind.deg+"deg)"
         };
 
         return (
             <div className="AwesomeWindInfo">
-                <h2>Awesome wind in {this.props.data.name}</h2>
-                <div style={style}></div>
-                
+            <h2>Awesome wind in {this.props.data.name}</h2>
+                <div className="container">
+                    <div style={style}>
+                    <img src="http://transom.org/wp/wp-content/uploads/2012/07/straight-arrow-marquee.gif?9d7bd4" />
+                    </div>
+                </div>    
             </div>
         );
     }

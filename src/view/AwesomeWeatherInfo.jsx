@@ -45,7 +45,7 @@ var GooglePieChart = React.createClass({
         var data = google.visualization.arrayToDataTable(this.props.data);
         console.log(data);
         var options = {
-            title: 'ABC',
+            title: 'Sun data',
         };
 
         var chart = new google.visualization.PieChart(

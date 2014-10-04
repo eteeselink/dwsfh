@@ -15,8 +15,8 @@ var AudibleWeatherInfo = React.createClass({
         var audio;
 
        	if (this.props.data.weather[0].main == "Rain") {
-       		iconUrl = "http://pi.bzzt.net/rain.jpg";
-       		audio = <a href={"http://pi.bzzt.net/rain.mp3"}>Listen</a>;
+       	    iconUrl = "http://pi.bzzt.net/rain.jpg";
+            audio = <audio src={"http://pi.bzzt.net/rain.mp3"} controls="controls" loop="loop" autoplay="autoplay"/>
        	}
 
         return (

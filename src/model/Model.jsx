@@ -5,9 +5,9 @@ var _ = require("lodash");
 // API docs are at: http://openweathermap.org/api
 var API_ROOT = "http://zonnetjewolkje.nl/data/2.5/";
 
-/** 
+/**
  * A class that contains data from a JSON API response. Assigns all keys
- * in that JSON object to `this`. 
+ * in that JSON object to `this`.
  */
 class JsonDataObject {
     constructor(query) {
@@ -57,7 +57,7 @@ class Location {
     constructor(city, country) {
         this.city = city;
         this.country = country;
-        
+
         var owmLocationName = encodeURIComponent(city + "," + country);
 
         this.currentWeather = new CurrentWeather(owmLocationName);

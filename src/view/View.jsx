@@ -1,6 +1,7 @@
 ﻿require("./View.styl");
 var Model = require("model/Model");
 var BoringWeatherInfo = require("./BoringWeatherInfo");
+var Thermometer = require("./Thermometer");
 var TextBox = require("common/TextBox");
 
 var View = React.createClass({
@@ -22,7 +23,7 @@ var View = React.createClass({
             <TextBox onChange={this.onCityChanged} defaultValue={model.location.city}/>
 
             <BoringWeatherInfo data={model.location.currentWeather}/>
-            <BoringWeatherInfo data={model.location.currentWeather}/>
+            <Thermometer data={model.location.currentWeather}/>
             <BoringWeatherInfo data={model.location.currentWeather}/>
             <br/>
             <BoringWeatherInfo data={model.location.currentWeather}/>

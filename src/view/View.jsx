@@ -1,6 +1,7 @@
 ﻿require("./View.styl");
 var Model = require("model/Model");
 var BoringWeatherInfo = require("./BoringWeatherInfo");
+var AwesomeWeatherInfo = require("./AwesomeWeatherInfo");
 var TextBox = require("common/TextBox");
 
 var View = React.createClass({
@@ -31,7 +32,7 @@ var View = React.createClass({
             <br/>
             <BoringWeatherInfo data={model.location.currentWeather}/>
             <BoringWeatherInfo data={model.location.currentWeather}/>
-            <BoringWeatherInfo data={model.location.currentWeather}/>
+            <AwesomeWeatherInfo data={model.location.currentWeather}/>
             <br/>
         </div>;
     }

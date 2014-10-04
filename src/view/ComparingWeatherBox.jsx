@@ -13,9 +13,9 @@ var ComparingWeatherBox = React.createClass({
 
     theDifference() {
         return {
-            temp   : 1,
-            rain   : 1,
-            clouds : 10
+            temp   : this.props.fixed.main.temp - this.props.data.main.temp,
+            rain   : (this.props.fixed.rain ? this.props.fixed.rain['1h'] : 0) - (this.props.data.rain ? this.props.data.rain['1h'] : 0),
+            clouds : this.props.fixed.clouds.all - this.props.data.clouds.all
         };
     },
 

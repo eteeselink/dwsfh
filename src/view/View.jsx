@@ -3,6 +3,8 @@ var Model = require("model/Model");
 var BoringWeatherInfo = require("./BoringWeatherInfo");
 var ComparingWeatherBox = require("./ComparingWeatherBox");
 var AwesomeWeatherInfo = require("./AwesomeWeatherInfo");
+var AwesomeWindInfo = require("./AwesomeWindInfo");
+
 var TextBox = require("common/TextBox");
 
 var View = React.createClass({
@@ -27,11 +29,13 @@ var View = React.createClass({
             <BoringWeatherInfo data={model.location.currentWeather}/>
             <BoringWeatherInfo data={model.location.currentWeather}/>
             <br/>
+
             <BoringWeatherInfo data={model.location.currentWeather}/>
             <BoringWeatherInfo data={model.betterLocation.currentWeather}/>
             <ComparingWeatherBox data={model.location.currentWeather} fixed={model.betterLocation.currentWeather} />
             <br/>
-            <BoringWeatherInfo data={model.location.currentWeather}/>
+
+            <AwesomeWindInfo data={model.location.currentWeather}/>
             <BoringWeatherInfo data={model.location.currentWeather}/>
             <AwesomeWeatherInfo data={model.location.currentWeather}/>
             <br/>

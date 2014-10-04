@@ -38,6 +38,11 @@ class CurrentWeather extends JsonDataObject {
     hasData() {
         return !!this.main;
     }
+
+    setTemperature(kelvin) {
+        this.main.temp = kelvin;
+        window.refreshView();
+    }
 }
 
 /**

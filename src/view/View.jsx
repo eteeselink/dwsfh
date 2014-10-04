@@ -5,7 +5,7 @@ var ComparingWeatherBox = require("./ComparingWeatherBox");
 var AwesomeWeatherInfo = require("./AwesomeWeatherInfo");
 var AwesomeWindInfo = require("./AwesomeWindInfo");
 var GonewildWeatherInfo = require("./GonewildWeather");
-
+var WeatherSlides = require("./WeatherSlides");
 var TextBox = require("common/TextBox");
 
 var View = React.createClass({
@@ -26,7 +26,7 @@ var View = React.createClass({
             Beautifully show the weather in:
             <TextBox onChange={this.onCityChanged} defaultValue={model.location.city}/>
 
-            <BoringWeatherInfo data={model.location.currentWeather}/>
+            <WeatherSlides data={model.location.currentWeather}/>
             <BoringWeatherInfo data={model.location.currentWeather}/>
             <GonewildWeatherInfo data={model.location.currentWeather}/>
             <br/>

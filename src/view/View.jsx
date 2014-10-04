@@ -1,17 +1,14 @@
 ﻿require("./View.styl");
 var Model = require("model/Model");
 var BoringWeatherInfo = require("./BoringWeatherInfo");
-<<<<<<< HEAD
 var Thermometer = require("./Thermometer");
-=======
 var ComparingWeatherBox = require("./ComparingWeatherBox");
 var AudibleWeatherInfo = require("./AudibleWeatherInfo");
 var AwesomeWeatherInfo = require("./AwesomeWeatherInfo");
 var AwesomeWindInfo = require("./AwesomeWindInfo");
 var GonewildWeatherInfo = require("./GonewildWeather");
 var BoringWeatherInfoTeamBier = require("./BoringWeatherInfoTeamBier");
-
->>>>>>> 8fcede9bb6f87db1af6995995a635b979b057536
+var WeatherSlides = require("./WeatherSlides");
 var TextBox = require("common/TextBox");
 
 var View = React.createClass({
@@ -32,11 +29,12 @@ var View = React.createClass({
             Beautifully show the weather in:
             <TextBox onChange={this.onCityChanged} defaultValue={model.location.city}/>
 
-            <BoringWeatherInfo data={model.location.currentWeather}/>
+            <WeatherSlides data={model.location.currentWeather}/>
             <Thermometer data={model.location.currentWeather}/>
             <GonewildWeatherInfo data={model.location.currentWeather}/>
             <br/>
-            <BoringWeatherInfoTeamBier data={model.location.currentWeather}/>
+
+            <BoringWeatherInfo data={model.location.currentWeather}/>
             <BoringWeatherInfo data={model.betterLocation.currentWeather}/>
             <ComparingWeatherBox data={model.location.currentWeather} fixed={model.betterLocation.currentWeather} />
             <br/>

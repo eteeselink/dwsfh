@@ -38,7 +38,7 @@ var ComparingWeatherBox = React.createClass({
                 <p>Daar (het) is namelijk:</p>
                 <div>
                     <b>{this.toUnsigned(this.theDifference().temp)}</b> {this.theDifference().temp === 1 ? 'graad' : 'graden'} <b>{this.theDifference().temp >= 0 ? 'warmer' : 'kouder'}</b>,<br />
-                    <b>{this.toUnsigned(this.theDifference().clouds)}</b> procent <b>{this.theDifference().clouds >= 0 ? 'minder' : 'meer'} bewolkt</b>,<br />
+                    <b>{this.toUnsigned(this.theDifference().clouds)}</b> procent <b>{this.theDifference().clouds >= 0 ? 'meer' : 'minder'} bewolkt</b>,<br />
                     {this.theDifference().rain >= 0 ? 'maar' : 'en'} er valt <b>{this.toUnsigned(this.theDifference().rain)}</b>mm <b>{this.theDifference().rain >= 0 ? 'meer' : 'minder'}</b> regen<br />
                 </div>
             </div>

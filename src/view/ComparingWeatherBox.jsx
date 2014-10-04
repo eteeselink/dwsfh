@@ -11,11 +11,19 @@ var ComparingWeatherBox = React.createClass({
         return this.props.fixed;
     },
 
+    kelvin2Celcius(kelvin) {
+        return kelvin - 273.15;
+    },
+
+    toUnsigned(param) {
+        return param < 0 ? param*-1 : param;
+    },
+
     theDifference() {
         return {
-            temp   : this.props.fixed.main.temp - this.props.data.main.temp,
-            rain   : (this.props.fixed.rain ? this.props.fixed.rain['1h'] : 0) - (this.props.data.rain ? this.props.data.rain['1h'] : 0),
-            clouds : this.props.fixed.clouds.all - this.props.data.clouds.all
+            temp   : Math.round(this.kelvin2Celcius(this.props.fixed.main.temp) - this.kelvin2Celcius(this.props.data.main.temp)),
+            rain   : Math.round((this.props.fixed.rain ? this.props.fixed.rain['1h'] : 0) - (this.props.data.rain ? this.props.data.rain['1h'] : 0)),
+            clouds : Math.round(this.props.fixed.clouds.all - this.props.data.clouds.all)
         };
     },
 
@@ -29,9 +37,9 @@ var ComparingWeatherBox = React.createClass({
                 <h2>Als ik jou was zou ik gaan naar <b>{this.thePlaceToGo().name}</b></h2>
                 <p>Daar (het) is namelijk:</p>
                 <div>
-                    <b>{this.theDifference().temp}</b> {this.theDifference().temp === 1 ? 'graad' : 'graden'} <b>{this.theDifference().temp >= 0 ? 'warmer' : 'kouder'}</b>,<br />
-                    <b>{this.theDifference().clouds}</b> procent <b>{this.theDifference().clouds >= 0 ? 'minder' : 'meer'} bewolkt</b>,<br />
-                    {this.theDifference().rain >= 0 ? 'maar' : 'en'} er valt <b>{this.theDifference().rain}</b>mm <b>{this.theDifference().rain >= 0 ? 'meer' : 'minder'}</b> regen<br />
+                    <b>{this.toUnsigned(this.theDifference().temp)}</b> {this.theDifference().temp === 1 ? 'graad' : 'graden'} <b>{this.theDifference().temp >= 0 ? 'warmer' : 'kouder'}</b>,<br />
+                    <b>{this.toUnsigned(this.theDifference().clouds)}</b> procent <b>{this.theDifference().clouds >= 0 ? 'minder' : 'meer'} bewolkt</b>,<br />
+                    {this.theDifference().rain >= 0 ? 'maar' : 'en'} er valt <b>{this.toUnsigned(this.theDifference().rain)}</b>mm <b>{this.theDifference().rain >= 0 ? 'meer' : 'minder'}</b> regen<br />
                 </div>
             </div>
         );
